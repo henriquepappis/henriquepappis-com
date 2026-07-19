@@ -1,13 +1,17 @@
+"use client";
+
 import { SectionHeading } from "@/components/SectionHeading";
-import { personalProjects } from "@/data/resume";
+import { useContent } from "@/lib/locale";
 
 export function Projects() {
+  const { personalProjects, ui } = useContent();
+
   return (
     <section
       id="projetos"
       className="mx-auto max-w-4xl scroll-mt-20 border-t border-border px-6 py-16 sm:px-8 sm:py-20"
     >
-      <SectionHeading eyebrow="06 · Projetos" title="Projetos pessoais" />
+      <SectionHeading eyebrow={ui.sections.projects.eyebrow} title={ui.sections.projects.title} />
 
       <div className="grid gap-8 sm:grid-cols-3">
         {personalProjects.map((project) => (

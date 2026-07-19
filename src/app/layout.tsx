@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import { ThemeScript } from "@/components/ThemeScript";
+import { LocaleProvider } from "@/lib/locale";
+import { content } from "@/data/content";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -14,9 +16,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Henrique Pappis · Desenvolvedor PHP Sênior",
-  description:
-    "Desenvolvedor PHP Sênior com mais de 15 anos de experiência em backend, APIs REST e sistemas escaláveis. Laravel, MySQL, Docker.",
+  title: content.pt.pageTitle,
+  description: content.pt.pageDescription,
 };
 
 export default function RootLayout({
@@ -37,7 +38,7 @@ export default function RootLayout({
         suppressHydrationWarning
         className="min-h-full flex flex-col bg-background text-foreground"
       >
-        {children}
+        <LocaleProvider>{children}</LocaleProvider>
       </body>
     </html>
   );

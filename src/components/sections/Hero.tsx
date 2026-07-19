@@ -1,8 +1,12 @@
+"use client";
+
 import { Mail, MapPin } from "lucide-react";
 import { LinkedinIcon } from "@/components/icons/LinkedinIcon";
-import { profile } from "@/data/resume";
+import { useContent } from "@/lib/locale";
 
 export function Hero() {
+  const { profile } = useContent();
+
   return (
     <section
       id="topo"

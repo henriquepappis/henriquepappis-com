@@ -1,14 +1,21 @@
+"use client";
+
 import { Globe2, HeartHandshake } from "lucide-react";
 import { SectionHeading } from "@/components/SectionHeading";
-import { internationalExperience } from "@/data/resume";
+import { useContent } from "@/lib/locale";
 
 export function InternationalExperience() {
+  const { internationalExperience, ui } = useContent();
+
   return (
     <section
       id="vivencia-internacional"
       className="mx-auto max-w-4xl scroll-mt-20 border-t border-border px-6 py-16 sm:px-8 sm:py-20"
     >
-      <SectionHeading eyebrow="05 · Vivência internacional" title="Intercâmbio e voluntariado" />
+      <SectionHeading
+        eyebrow={ui.sections.international.eyebrow}
+        title={ui.sections.international.title}
+      />
 
       <div className="flex flex-col gap-4">
         <div className="flex items-baseline justify-between gap-4">

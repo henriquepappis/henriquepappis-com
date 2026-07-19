@@ -1,15 +1,19 @@
+"use client";
+
 import { Mail, MessageCircle } from "lucide-react";
 import { LinkedinIcon } from "@/components/icons/LinkedinIcon";
 import { SectionHeading } from "@/components/SectionHeading";
-import { profile } from "@/data/resume";
+import { useContent } from "@/lib/locale";
 
 export function Contact() {
+  const { profile, ui } = useContent();
+
   return (
     <section
       id="contato"
       className="mx-auto max-w-4xl scroll-mt-20 border-t border-border px-6 py-16 sm:px-8 sm:py-20"
     >
-      <SectionHeading eyebrow="09 · Contato" title="Vamos conversar" />
+      <SectionHeading eyebrow={ui.sections.contact.eyebrow} title={ui.sections.contact.title} />
 
       <ul className="space-y-4">
         <li>

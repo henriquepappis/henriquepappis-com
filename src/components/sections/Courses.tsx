@@ -1,21 +1,25 @@
+"use client";
+
 import { BookOpen } from "lucide-react";
 import { SectionHeading } from "@/components/SectionHeading";
-import { courses } from "@/data/resume";
+import { useContent } from "@/lib/locale";
 
 export function Courses() {
+  const { courses, ui } = useContent();
+
   return (
     <section
       id="cursos"
       className="mx-auto max-w-4xl scroll-mt-20 border-t border-border px-6 py-16 sm:px-8 sm:py-20"
     >
-      <SectionHeading eyebrow="04 · Cursos" title="Cursos complementares" />
+      <SectionHeading eyebrow={ui.sections.courses.eyebrow} title={ui.sections.courses.title} />
 
       <p className="mb-6 font-mono text-xs text-muted">{courses.institution}</p>
 
       <div className="grid gap-8 sm:grid-cols-2">
         <div>
           <h3 className="mb-3 font-mono text-xs uppercase tracking-[0.15em] text-muted">
-            Concluídos
+            {ui.sections.courses.completed}
           </h3>
           <ul className="space-y-2.5">
             {courses.completed.map((course) => (
@@ -29,7 +33,7 @@ export function Courses() {
 
         <div>
           <h3 className="mb-3 font-mono text-xs uppercase tracking-[0.15em] text-muted">
-            Em andamento
+            {ui.sections.courses.inProgress}
           </h3>
           <ul className="space-y-2.5">
             {courses.inProgress.map((course) => (

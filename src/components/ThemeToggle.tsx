@@ -2,6 +2,7 @@
 
 import { Moon, Sun } from "lucide-react";
 import { useSyncExternalStore } from "react";
+import { useContent } from "@/lib/locale";
 
 const listeners = new Set<() => void>();
 
@@ -27,12 +28,13 @@ function setTheme(isDark: boolean) {
 
 export function ThemeToggle() {
   const isDark = useSyncExternalStore(subscribe, getSnapshot, getServerSnapshot);
+  const { ui } = useContent();
 
   return (
     <button
       type="button"
       onClick={() => setTheme(!isDark)}
-      aria-label="Alternar tema claro/escuro"
+      aria-label={ui.themeToggleLabel}
       className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-border text-foreground/70 transition-colors hover:border-accent hover:text-accent"
     >
       {isDark ? (

@@ -1,14 +1,21 @@
+"use client";
+
 import { GraduationCap } from "lucide-react";
 import { SectionHeading } from "@/components/SectionHeading";
-import { education } from "@/data/resume";
+import { useContent } from "@/lib/locale";
 
 export function Education() {
+  const { education, ui } = useContent();
+
   return (
     <section
       id="formacao"
       className="mx-auto max-w-4xl scroll-mt-20 border-t border-border px-6 py-16 sm:px-8 sm:py-20"
     >
-      <SectionHeading eyebrow="03 · Formação" title="Formação acadêmica" />
+      <SectionHeading
+        eyebrow={ui.sections.education.eyebrow}
+        title={ui.sections.education.title}
+      />
 
       <ul className="space-y-6">
         {education.map((item) => (

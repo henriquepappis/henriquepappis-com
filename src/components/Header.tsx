@@ -1,15 +1,21 @@
-import { ThemeToggle } from "@/components/ThemeToggle";
+"use client";
 
-const navLinks = [
-  { href: "#sobre", label: "Sobre" },
-  { href: "#experiencia", label: "Experiência" },
-  { href: "#formacao", label: "Formação" },
-  { href: "#projetos", label: "Projetos" },
-  { href: "#stack", label: "Stack" },
-  { href: "#contato", label: "Contato" },
-];
+import { LocaleToggle } from "@/components/LocaleToggle";
+import { ThemeToggle } from "@/components/ThemeToggle";
+import { useContent } from "@/lib/locale";
 
 export function Header() {
+  const { ui } = useContent();
+
+  const navLinks = [
+    { href: "#sobre", label: ui.nav.about },
+    { href: "#experiencia", label: ui.nav.experience },
+    { href: "#formacao", label: ui.nav.education },
+    { href: "#projetos", label: ui.nav.projects },
+    { href: "#stack", label: ui.nav.stack },
+    { href: "#contato", label: ui.nav.contact },
+  ];
+
   return (
     <header className="sticky top-0 z-50 border-b border-border bg-background/85 backdrop-blur">
       <div className="mx-auto flex max-w-4xl items-center justify-between px-6 py-4 sm:px-8">
@@ -32,7 +38,10 @@ export function Header() {
           ))}
         </nav>
 
-        <ThemeToggle />
+        <div className="flex items-center gap-3">
+          <LocaleToggle />
+          <ThemeToggle />
+        </div>
       </div>
     </header>
   );

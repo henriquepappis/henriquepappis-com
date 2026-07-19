@@ -1,14 +1,21 @@
+"use client";
+
 import { Building2, MapPin } from "lucide-react";
 import { SectionHeading } from "@/components/SectionHeading";
-import { experience } from "@/data/resume";
+import { useContent } from "@/lib/locale";
 
 export function Experience() {
+  const { experience, ui } = useContent();
+
   return (
     <section
       id="experiencia"
       className="mx-auto max-w-4xl scroll-mt-20 border-t border-border px-6 py-16 sm:px-8 sm:py-20"
     >
-      <SectionHeading eyebrow="02 · Trajetória" title="Experiência" />
+      <SectionHeading
+        eyebrow={ui.sections.experience.eyebrow}
+        title={ui.sections.experience.title}
+      />
 
       <ol className="relative border-l border-border pl-6 sm:pl-8">
         {experience.map((job) => (
