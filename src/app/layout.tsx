@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import { Geist, Geist_Mono } from "next/font/google";
 import { ThemeScript } from "@/components/ThemeScript";
 import { LocaleProvider } from "@/lib/locale";
@@ -39,6 +40,11 @@ export default function RootLayout({
         className="min-h-full flex flex-col bg-background text-foreground"
       >
         <LocaleProvider>{children}</LocaleProvider>
+        <Script
+          src="https://static.cloudflareinsights.com/beacon.min.js"
+          strategy="afterInteractive"
+          data-cf-beacon='{"token": "d075f992c2cf4473a120e95a75c91fb1"}'
+        />
       </body>
     </html>
   );
