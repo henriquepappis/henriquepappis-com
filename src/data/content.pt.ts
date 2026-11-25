@@ -186,7 +186,7 @@ export const pt: ContentShape = {
     period: "junho de 2015 – junho de 2016",
     location: "Irlanda",
     description:
-      "Intercâmbio para aprimoramento do inglês e vivência internacional, atuando também em áreas não correlacionadas à tecnologia.",
+      "Intercâmbio na Erin College (Irlanda), com conclusão do curso de General English no nível Advanced, para desenvolver fluência avançada e adaptação a ambientes multinacionais. Atuei também em áreas não correlacionadas à tecnologia.",
     volunteer:
       "Vendedor voluntário na Gorta Shop, loja de caridade da Self Help Africa (International Development Organisation).",
   },

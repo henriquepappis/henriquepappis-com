@@ -186,7 +186,7 @@ export const en: ContentShape = {
     period: "June 2015 – June 2016",
     location: "Ireland",
     description:
-      "Exchange program to improve my English and gain international experience, also working in fields unrelated to technology.",
+      "Exchange program at Erin College (Ireland), completing the General English course at the Advanced level, to build advanced fluency and adapt to multinational environments. Also worked in fields unrelated to technology.",
     volunteer:
       "Volunteer sales assistant at Gorta Shop, a charity shop run by Self Help Africa (International Development Organisation).",
   },
