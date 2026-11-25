@@ -258,12 +258,13 @@ export const pt: ContentShape = {
       items: ["Node.js", "Fastify", "NestJS", "Prisma"],
     },
     {
-      category: "Cloud & Serverless",
+      category: "Cloud & Hospedagem",
       items: [
-        "Computação serverless",
-        "Deploy em edge",
-        "Bancos de dados serverless",
-        "Hospedagem gerenciada (PaaS)",
+        "Oracle Cloud (OCI)",
+        "Cloudflare (DNS, R2, Email Routing)",
+        "Coolify (PaaS self-hosted)",
+        "Traefik",
+        "Backups automatizados (pg_dump → R2)",
       ],
     },
     {
