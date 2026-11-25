@@ -45,7 +45,7 @@ export const en: ContentShape = {
     location: "Recife, Pernambuco, Brazil",
     phone: "(81) 98660-0535",
     whatsappUrl: "https://wa.me/5581986600535",
-    email: "falecom@henriquepappis.com",
+    email: "contact@henriquepappis.com",
     linkedinLabel: "linkedin.com/in/henriquepappis",
     linkedinUrl: "https://linkedin.com/in/henriquepappis",
     pcd: "PWD",
