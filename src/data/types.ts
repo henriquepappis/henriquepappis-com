@@ -70,6 +70,7 @@ export type UiCopy = {
     projects: string;
     stack: string;
     contact: string;
+    toggleMenu: string;
   };
   sections: {
     about: SectionCopy;

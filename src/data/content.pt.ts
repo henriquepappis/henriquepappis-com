@@ -14,6 +14,7 @@ export const pt: ContentShape = {
       projects: "Projetos",
       stack: "Stack",
       contact: "Contato",
+      toggleMenu: "Abrir menu de navegação",
     },
     sections: {
       about: { eyebrow: "01 · Perfil", title: "Sobre" },

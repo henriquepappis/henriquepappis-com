@@ -16,9 +16,33 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+const siteUrl = "https://henriquepappis.com";
+
 export const metadata: Metadata = {
+  metadataBase: new URL(siteUrl),
   title: content.pt.pageTitle,
   description: content.pt.pageDescription,
+  alternates: {
+    canonical: siteUrl,
+    languages: {
+      "pt-BR": siteUrl,
+      en: siteUrl,
+    },
+  },
+  openGraph: {
+    title: content.pt.pageTitle,
+    description: content.pt.pageDescription,
+    url: siteUrl,
+    siteName: content.pt.profile.name,
+    locale: "pt_BR",
+    alternateLocale: "en_US",
+    type: "profile",
+  },
+  twitter: {
+    card: "summary",
+    title: content.pt.pageTitle,
+    description: content.pt.pageDescription,
+  },
 };
 
 export default function RootLayout({
