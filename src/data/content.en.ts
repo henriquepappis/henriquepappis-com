@@ -193,6 +193,11 @@ export const en: ContentShape = {
 
   education: [
     {
+      degree: "Postgraduate Certificate in Object-Oriented Development with Java",
+      institution: "Estácio",
+      period: "2026–2027 (in progress)",
+    },
+    {
       degree: "Postgraduate Certificate in Software Engineering",
       institution: "Faculdade Unyleya",
       period: "2019–2021",

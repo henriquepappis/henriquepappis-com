@@ -193,6 +193,11 @@ export const pt: ContentShape = {
 
   education: [
     {
+      degree: "Pós-graduação em Desenvolvimento Orientado a Objetos com Java",
+      institution: "Estácio",
+      period: "2026–2027 (em andamento)",
+    },
+    {
       degree: "Pós-graduação em Engenharia de Software",
       institution: "Faculdade Unyleya",
       period: "2019–2021",
