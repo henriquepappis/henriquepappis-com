@@ -10,6 +10,18 @@ export type Profile = {
   linkedinLabel: string;
   linkedinUrl: string;
   pcd: string;
+  cvUrl: string;
+};
+
+export type CvHeadings = {
+  summary: string;
+  experience: string;
+  education: string;
+  courses: string;
+  completed: string;
+  skills: string;
+  languages: string;
+  international: string;
 };
 
 export type Experience = {
@@ -85,6 +97,8 @@ export type UiCopy = {
   };
   themeToggleLabel: string;
   localeToggleLabel: string;
+  downloadCv: string;
+  cv: CvHeadings;
 };
 
 export type ContentShape = {

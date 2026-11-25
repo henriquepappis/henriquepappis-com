@@ -1,11 +1,11 @@
 "use client";
 
-import { Mail, MapPin } from "lucide-react";
+import { Download, Mail, MapPin } from "lucide-react";
 import { LinkedinIcon } from "@/components/icons/LinkedinIcon";
 import { useContent } from "@/lib/locale";
 
 export function Hero() {
-  const { profile } = useContent();
+  const { profile, ui } = useContent();
 
   return (
     <section
@@ -44,6 +44,14 @@ export function Hero() {
         >
           <LinkedinIcon className="h-4 w-4" />
           {profile.linkedinLabel}
+        </a>
+        <a
+          href={profile.cvUrl}
+          download
+          className="inline-flex items-center gap-2 rounded-md border border-border px-4 py-2.5 text-sm font-medium text-foreground transition-colors hover:border-accent hover:text-accent"
+        >
+          <Download className="h-4 w-4" strokeWidth={1.75} />
+          {ui.downloadCv}
         </a>
       </div>
     </section>

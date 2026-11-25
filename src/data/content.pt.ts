@@ -37,6 +37,17 @@ export const pt: ContentShape = {
     },
     themeToggleLabel: "Alternar tema claro/escuro",
     localeToggleLabel: "Alternar idioma do site",
+    downloadCv: "Baixar CV (PDF)",
+    cv: {
+      summary: "Resumo profissional",
+      experience: "Experiência profissional",
+      education: "Formação acadêmica",
+      courses: "Cursos",
+      completed: "Concluídos",
+      skills: "Habilidades técnicas",
+      languages: "Idiomas",
+      international: "Experiência internacional",
+    },
   },
 
   profile: {
@@ -49,6 +60,7 @@ export const pt: ContentShape = {
     linkedinLabel: "linkedin.com/in/henriquepappis",
     linkedinUrl: "https://linkedin.com/in/henriquepappis",
     pcd: "PCD",
+    cvUrl: "/CV-Henrique-Pappis-pt.pdf",
   },
 
   summary: `Desenvolvedor PHP Sênior com mais de 15 anos de experiência em backend, APIs REST e modernização de sistemas críticos, com especialização em Laravel e domínio de outros frameworks do ecossistema PHP (Symfony, Laminas, Mezzio, Yii, CodeIgniter). Já liderei tecnicamente times multidisciplinares, incluindo uma passagem internacional em Portugal como Tech Lead, onde escalei uma plataforma de venda de ingressos de 5 mil para 100 mil usuários simultâneos em grandes eventos. Construí e mantive sistemas usados por dezenas de milhares de empresas, de uma plataforma fiscal SaaS a sistemas financeiros críticos para prefeituras e órgãos de controle, sempre com foco em integrações, mensageria, observabilidade e infraestrutura containerizada (Docker, Kubernetes). Atuo com autonomia entre times técnicos e de produto, unindo qualidade de código, performance e aderência a compliance (PCI, ITIL) para entregar soluções que resolvem problemas reais de negócio.`,
