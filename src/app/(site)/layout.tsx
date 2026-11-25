@@ -39,7 +39,7 @@ export const metadata: Metadata = {
     type: "profile",
   },
   twitter: {
-    card: "summary",
+    card: "summary_large_image",
     title: content.pt.pageTitle,
     description: content.pt.pageDescription,
   },
