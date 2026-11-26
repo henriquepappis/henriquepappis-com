@@ -1,6 +1,8 @@
 User-agent: *
 Allow: /
-Content-Signal: ai-train=yes, search=yes, ai-input=yes
+# Content-Signal: ai-train=yes, search=yes, ai-input=yes
+# (diretiva proposta pelo Cloudflare; fica como comentário porque validadores
+#  como o Lighthouse ainda a acusam como desconhecida — o Allow acima já libera tudo)
 
 # Bots de IA — liberados explicitamente para treinamento, busca e uso como input
 User-agent: GPTBot
