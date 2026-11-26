@@ -18,6 +18,33 @@ const geistMono = Geist_Mono({
 
 const siteUrl = "https://henriquepappis.com";
 
+const { profile } = content.pt;
+
+// Dados estruturados (schema.org/Person): ajudam Google e IAs a ligar o nome
+// ao perfil profissional, ao LinkedIn/GitHub e à Pappis Tecnologia.
+const personJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: profile.name,
+  url: siteUrl,
+  jobTitle: "Desenvolvedor PHP Sênior",
+  description: content.pt.pageDescription,
+  email: `mailto:${profile.email}`,
+  address: {
+    "@type": "PostalAddress",
+    addressLocality: "Recife",
+    addressRegion: "PE",
+    addressCountry: "BR",
+  },
+  knowsAbout: ["PHP", "Laravel", "APIs REST", "Docker", "Kubernetes", "MySQL", "PostgreSQL"],
+  sameAs: [profile.linkedinUrl, "https://github.com/henriquepappis"],
+  affiliation: {
+    "@type": "Organization",
+    name: "Pappis Tecnologia",
+    url: "https://pappistecnologia.com.br/",
+  },
+};
+
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: content.pt.pageTitle,
@@ -63,6 +90,12 @@ export default function RootLayout({
         suppressHydrationWarning
         className="min-h-full flex flex-col bg-background text-foreground"
       >
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(personJsonLd).replace(/</g, "\\u003c"),
+          }}
+        />
         <LocaleProvider>{children}</LocaleProvider>
         <Script
           src="https://static.cloudflareinsights.com/beacon.min.js"
